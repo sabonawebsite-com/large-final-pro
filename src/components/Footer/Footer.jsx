@@ -20,6 +20,7 @@ const Footer = () => {
     <div className='footer'id='footer'>
       <div className="footer-content">
 <div className="footer-content-left">
+
 <img src={assets.logo} className='nameLogo' alt="" />
 <p>
   If you have any idea or comment you can connect in different way
@@ -40,7 +41,7 @@ const Footer = () => {
 </div>
 </div>
 <div className="footer-content-center">
-    <h1>Group⑸</h1>
+    <h1>Group4</h1>
     <ul>
    <a href="/"><li>Home</li></a> 
    <Link to="/about"> <li >About us</li></Link>
@@ -54,13 +55,13 @@ const Footer = () => {
     <h2>Get In Touch</h2>
    <li>+125928629040</li>
    <li>0928860911</li>
-   <li>group5@gmail.com</li>
+   <li>group4@gmail.com</li>
 </div>
 <a href='/'><button >Back</button></a>
 <hr />
       </div>
       <p className="footer-copyright">
-        {new Date().getFullYear()}&copy;Group5 All Right Resived </p>
+        {new Date().getFullYear()}&copy;Group4 All Right Resived </p>
  
     </div>
   )

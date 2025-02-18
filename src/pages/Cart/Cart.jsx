@@ -10,12 +10,12 @@ const Cart = () => {
     <div className='cart'>
       <div className="cart-items">
         <div className="cart-items-title">
-          <p>Title</p>
-          <p>Items</p>
-          <p>Price</p>
-          <p>Quantity</p>
-          <p>Total</p>
-          <p>Remove</p>
+          <p>Title/waanta</p>
+          <p>Items/Gosa</p>
+          <p>Price/Gatii</p>
+          <p>Quantity/hagam</p>
+          <p>Total/waligalaan</p>
+          <p>Remove/Haqii</p>
         </div>
         <br />
         <hr />
@@ -25,10 +25,10 @@ const Cart = () => {
               <div key={index} className="cart-items-title cart-items-item">
                 <img src={url+"/image/"+item.image} alt="" />
                 <p>{item.name}</p>
-                <p>${item.price}</p>
+                <p>Birr:{item.price}</p>
                 <p>{cartItem[item._id]}</p>
-                <p>${item.price*cartItem[item._id]}</p>
-                <p onClick={()=>removeFromcart(item._id)} className='crows'>X</p>
+                <p>Birr:{item.price*cartItem[item._id]}</p>
+                <p onClick={()=>removeFromcart(item._id)} className='crows'>❌</p>
               </div>
               <hr />
               </div>
@@ -38,31 +38,32 @@ const Cart = () => {
       </div>
       <div className="cart-bottom">
         <div className="cart-total">
-          <h2>CART TOTAL</h2>
+          <h2>CART TOTAL (kafalltii waliigalaa)</h2>
           <div>
           <div className="cart-total-detail">
-          <p>subTotal</p>
-          <p>${getTotalCartAmount()}</p>
+          <p>subTotal (kafalltii waliigalaa)</p>
+          <p>Birr:{getTotalCartAmount()}</p>
         </div>
         <hr />
         <div className="cart-total-detail">
-        <p>delivery free</p>
-          <p>${getTotalCartAmount()===0?0:2}</p>
+        <p>delivery fee (Gatii Gejiibaa)</p>
+          <p>Birr:{getTotalCartAmount()===0?0:20}</p>
           </div>
           <hr />
           <div className="cart-total-detail">
           <b>Total</b>
-          <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
+          <b>Birr:{getTotalCartAmount()===0?0:getTotalCartAmount()+20}</b>
         </div>
         </div>
-        <button onClick={()=>navigate("/order")} className='button11'>PROCEED TO CHECKOUT</button>
+        {/* <button onClick={()=>navigate("/order")} className='button11'>PROCEED TO CHECKOUT (KAFALLTII RAAWADHUU)</button> */}
+        <button  className='button11'><a href="https://www.ethiotelecom.et/telebirr/telebirr-registration/">PROCEED TO CHECKOUT (KAFALLTII RAAWADHUU)</a></button>
         </div>
         <div className="cart-promocode">
         <div>
-      <p>if you have promo CODE write here</p>
+      
           <div className='cart-promo-code-input'>
-<input type="text" placeholder='enter your promo code here' />
-<button>sumbit</button>
+{/* <input type="text" placeholder='enter your promo code here' /> */}
+
         
        
 

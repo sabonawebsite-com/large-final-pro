@@ -11,6 +11,7 @@ import menu_5 from './goat_menu.png'
 import menu_6 from './goat_menu.png'
 import menu_7 from './donkey_menu.png'
 import menu_8 from './sa_1.png'
+import menu_9 from './icon_group_1.png'
 import product_1 from './food_2.png'
 import product_2 from './food_2.png'
 import product_3 from './food_3.png'
@@ -40,8 +41,14 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 import car_liveStock from './car_liveStock.png'
+import location_icon from './location_icon.png'
+import mail_icon from './mail_icon.png'
+import msg_icon from './msg_icon.png'
+import phone_icon from './phone_icon.png'
+import generate1 from './generate1.gif'
 
 export const assets = {
+    generate1,
     group1,
     group,
     logo,
@@ -64,7 +71,13 @@ export const assets = {
     profile_icon,
     logout_icon,
     bag_icon,
-    parcel_icon
+    parcel_icon,
+    location_icon,
+    mail_icon,
+    msg_icon,
+    phone_icon
+
+
 }
 
 export const menu_list = [
@@ -98,7 +111,11 @@ export const menu_list = [
     },
     {
         menu_name: "Porducts",
-        menu_image: menu_8
+        menu_image: menu_8,
+    },
+    {
+        menu_name: "Foods",
+        menu_image: menu_9
     }
    ]
 

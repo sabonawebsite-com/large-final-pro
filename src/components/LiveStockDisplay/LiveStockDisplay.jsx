@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import './LiveStockDisplay.css';
-import { StoreContext } from '../../context/StoreContext'; // Assuming the path is correct
-import LiveStockItem from '../LiveStockItem/LiveStockItem'; // Assuming the path is correct
+import { StoreContext } from '../../context/StoreContext'; 
+import LiveStockItem from '../LiveStockItem/LiveStockItem'; 
 
 const LiveStockDisplay = ({ category }) => {
   const { LiveStock_list } = useContext(StoreContext);
 
   if (!LiveStock_list) {
-    return <p>Loading LiveStock data...</p>; // Handle potential missing data
+    return <p>Loading LiveStock data...</p>; 
   }
 
   return (

@@ -10,6 +10,8 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Verify from './pages/Verify/Verify'
 import Myorder from './pages/Myorder/Myorder'
 import About from './components/About/About'
+
+import Contact from './components/Contact/Contact'
 // import Searchle from './components/Searchble/Searchle'
 const App = () => {
   const[showlogin,setShowlogin]=useState(false)
@@ -29,6 +31,7 @@ const App = () => {
         <Route path='/myorders' element={<Myorder/>}/>
       </Routes>
     </div>
+    <Contact/>
     <Footer/>
     </div>
   )

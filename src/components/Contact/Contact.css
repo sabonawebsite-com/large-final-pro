@@ -1,0 +1,98 @@
+.contact {
+    margin: 80px auto;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .contact-col {
+    flex-basis: 48%;
+    color: #030303;
+  }
+
+  
+  .contact-col h3 {
+    font-size: 25px;
+    color: rgb(24, 24, 200);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-col h3 img {
+    width: 50px;
+    margin-left: 10px;
+    margin-bottom: 0;
+  
+  }
+  
+  .contact-col p {
+    font-weight: 450px;
+    font-size: 15px;
+    display: flex;
+    list-style: 0.5;
+  
+  }
+  
+  .contact-col ul li {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+  
+  }
+  
+  .contact-col ul li img {
+    width: 25px;
+    margin-right: 10px;
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    display: block;
+    background: #EBECFE;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    resize: none;
+  }
+  .dark-btn{
+    background-color: green;
+    color: white;
+    border: 1px solid red;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .dark-btn:hover{
+    background-color: rgb(160, 235, 160);
+    color: rgb(15, 15, 15);
+    border: 1px solid rgb(160, 45, 45);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 22px;
+  }
+ 
+  label{
+    font-size: 20px;
+    color: green;
+  }
+  
+  .contact-col span {
+    display: block;
+    margin: 20px 0;
+  }
+  
+  @media (max-width: 700px) {
+    .contact {
+      display: block;
+    }
+  
+    .contact-col {
+      padding: 20px;
+    }
+  }
