@@ -44,6 +44,8 @@ const Contact = () => {
       </div>
       <div className='contact-col'>
         <form onSubmit={onSubmit}>
+          <h2>Fill this information </h2>
+          <h2>Odefannoo Armaan gadii guutii</h2>
           <label > Enter Your Name / Maqaa Kee 👇🏻</label>
           <input type="text" name='name' placeholder='Enter your name / Maqaa Kee' required />
           <label >Phone Number / Lakk bilbilaa 👇🏻</label>

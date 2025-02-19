@@ -32,5 +32,3 @@ const LiveStockItem = ({id,name,price,description,image}) => {
 }
 
 export default LiveStockItem
-
-
