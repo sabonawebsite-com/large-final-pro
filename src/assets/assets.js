@@ -177,12 +177,5 @@ export const LiveStock_list = [
         price: 15,
         description: "product provides essential nutrients for overall health and well-being",
         category: "Porducts"
-    }, {
-        _id: "9",
-        name: "Ripple Ice Cream",
-        image: product_9,
-        price: 14,
-        description: "product provides essential nutrients for overall health and well-being",
-        category: "Xaa'oo"
-    }
+    },
 ]
