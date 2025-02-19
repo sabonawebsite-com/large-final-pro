@@ -20,6 +20,7 @@ const LiveStockItem = ({id,name,price,description,image}) => {
    </div>
    <div className="live-stock-item-ifo">
     <div className="live-stock-item-rating">
+    
     <p> {name} </p>
     <img src={assets.rating_starts} alt="" />
     </div>

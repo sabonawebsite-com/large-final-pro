@@ -21,7 +21,7 @@ setComm_spo(!comm_spo)
 }
   const logout = () => {  
     localStorage.removeItem("token");  
-    setToken("");  
+    setToken("");    
     navigate("/");  
   };  
 
