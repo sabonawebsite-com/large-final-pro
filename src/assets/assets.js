@@ -46,9 +46,10 @@ import mail_icon from './mail_icon.png'
 import msg_icon from './msg_icon.png'
 import phone_icon from './phone_icon.png'
 import generate1 from './generate1.gif'
-
+import baxee from './baxee.gif'
 export const assets = {
     generate1,
+    baxee,
     group1,
     group,
     logo,

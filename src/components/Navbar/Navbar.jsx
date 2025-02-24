@@ -36,7 +36,7 @@ setComm_spo(!comm_spo)
         <a href='#footer' className={menu==="contact-us" ? "active" : ""} onClick={() => setMenu("contact-us")}>contact-us</a>  
         <a href='#contact' className={menu==="Add-info" ? "active" : ""} onClick={() => setMenu("Add-info")}>Add-info</a>  
       </ul>  
-      <img src={assets} alt="m" onClick={comm_advert}/>
+      <a href="https://sabonawebsite-com.github.io/hotel-caffe/" className='advertise'><img src={assets.generate1} alt="m"/></a>
       {comm_spo && <Comm_spo/>}
       <div className="navbar-right">  
        

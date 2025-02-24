@@ -25,6 +25,10 @@
     align-items: center;
     
 }
+.advertise img{
+    width: 40px;
+    border-radius: 50px;
+}
 .navbar button{
     background-color: transparent;
     font-size: 16px;

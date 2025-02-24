@@ -36,7 +36,7 @@ const Contact = () => {
         <p>Baga Naagaa Gara Gabaa Digitalawaa keenyatti Dhuftan Haaluma Armaan olitti ibsametti Karaa gababa omisha keenya ilaltanii Bitachuu dandessu </p>
         <p>Odeffanno Gahaa Argachuu yoo barbadan Karaalee Armaan gaditti ibsameen nu qunnamaa 👇</p>
         <ul>
-          <li> <img src={assets.mail_icon} alt="" />Group4@gmail.com</li>
+          <li> <img src={assets.mail_icon} alt="" />Group5@gmail.com</li>
           <li> <img src={assets.phone_icon} alt="" />0945671967</li>
           <li> <img src={assets.location_icon} alt="" />Borana Yabello  Ethiopia</li>
 
@@ -53,7 +53,7 @@ const Contact = () => {
           <label >Write message Here / Yaada Kee 👇🏻</label>
           <textarea name='message' rows="6" placeholder='message / yaada kee' required></textarea>
         
-          <button type='submit' className='dark-btn'>Send Now➡</button>
+          <button type='submit' className='dark-btn'>Send Now(Ergii)➡</button>
         </form>
         <span>{result}</span>
       </div>
