@@ -41,11 +41,15 @@ else{
   
   return (
     <div className='login-pop-up'>
+     
    
       <form onSubmit={onlogin} className='login-pop-up-contener'>
+      <img className='icon-group1' src={assets.group1} alt="" />
+      <button className='cross-act' onClick={()=>setShowlogin(false)}>❌</button>
         <div className="login-pop-up-title">
             <h1>{currState}</h1>
-            <img onClick={()=>setShowlogin(false)} src={assets.cross_icon} alt="" />
+            
+            {/* <img onClick={()=>setShowlogin(false)} src={assets.cross_icon} alt="" /> */}
         </div>
           <div className="login-pop-up-inputs">
             {currState==="Login"?<></>: <input autoComplete='off' autoFocus  name='name' onChange={onChangeHandeler} value={data.name} type="text" placeholder='Your Name' required/>}

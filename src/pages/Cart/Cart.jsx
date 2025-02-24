@@ -55,7 +55,7 @@ const Cart = () => {
           <b>Birr:{getTotalCartAmount()===0?0:getTotalCartAmount()+20}</b>
         </div>
         </div>
-        {/* <button onClick={()=>navigate("/order")} className='button11'>PROCEED TO CHECKOUT (KAFALLTII RAAWADHUU)</button> */}
+        <button onClick={()=>navigate("/distro")} className='button11'>Main Distribution (Gidugala Rabsaa)</button>
         <button  className='button11'><a href="https://www.ethiotelecom.et/telebirr/telebirr-registration/">PROCEED TO CHECKOUT (KAFALLTII RAAWADHUU)</a></button>
         </div>
         <div className="cart-promocode">
