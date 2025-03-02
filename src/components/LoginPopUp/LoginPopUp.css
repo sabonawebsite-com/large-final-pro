@@ -21,11 +21,12 @@
 .login-pop-up-contener {
     position: relative;
     background: #fff;
-    padding: 2.5rem 3rem;
+    padding: 2rem 3rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 450px;
+    
     transform: translateY(0);
     transition: transform 0.3s ease;
 }
@@ -97,7 +98,7 @@
     padding: 1rem;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    background: linear-gradient(135deg, #d208ec, #2980b9);
     color: white;
     font-size: 1.1rem;
     font-weight: 600;
@@ -133,14 +134,14 @@
 }
 
 .login-pop-up-contener span {
-    color: #3498db;
+    color: #2ff507;
     cursor: pointer;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .login-pop-up-contener span:hover {
-    color: #2980b9;
+    color: #fa03d9;
     text-decoration: underline;
 }
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './Header.css'
 const Header = () => {
-  const foods=["Uffata","Midhaan","Nyata","Dhugatii","Meeshaalee","Kuduraalee","Buna","Xaa'oo","fi Mana"]
+  const omisha=["SANGAA/OX","SA'AA/COW","PRODUCTS/BU'AALEE","GALAA/CAMEL","HARREE/DONKYE","HOLAA/SHEEP","RE'EE/GOAT",]
   const[list,setList]=useState("");
   function listOfFood(){
-    document.querySelector('pre').innerHTML=foods;
+    document.querySelector('p').innerHTML=omisha;
     setList(list)
   }
   return (
@@ -12,7 +12,7 @@ const Header = () => {
       <div className="header-contents">
         
         <button onClick={listOfFood}> Products</button>
-        <pre></pre>
+        <p className='display-things'></p>
       </div>
     </div>
   )

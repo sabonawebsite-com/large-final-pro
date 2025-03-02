@@ -23,8 +23,8 @@
   position: relative;
   padding: 2.5rem;
   border-radius: 15px;
-  background: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: rgb(3, 167, 243);
+  box-shadow: 0 10px 30px rgba(243, 4, 115, 0.1);
   transform: translateY(0);
   transition: transform 0.3s ease;
 }

@@ -30,6 +30,7 @@ const Contact = () => {
   };
   return (
     <div className='contact' id='contact'>
+    
       <div className='contact-col'>
         <h3>Send us message <img src={assets.group1} alt="" /></h3>
         <p>Revolutionizing livestock trading. Our system provides a transparent and efficient way to buy and sell livestock.  Features include detailed animal profiles, secure payment options, and direct communication with buyers for more info👇🏿</p><br />
@@ -53,7 +54,7 @@ const Contact = () => {
           <label >Write message Here / Yaada Kee 👇🏻</label>
           <textarea name='message' rows="6" placeholder='message / yaada kee' required></textarea>
         
-          <button type='submit' className='dark-btn'>Send Now(Ergii)➡</button>
+          <button type='submit' className='dark-btn'>SEND NOW / ERGII➡</button>
         </form>
         <span>{result}</span>
       </div>

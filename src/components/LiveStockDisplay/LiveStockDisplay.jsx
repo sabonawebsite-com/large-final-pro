@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './LiveStockDisplay.css';  
 import { StoreContext } from '../../context/StoreContext';   
 import LiveStockItem from '../LiveStockItem/LiveStockItem';   
+import { assets } from '../../assets/assets';
 
 const LiveStockDisplay = ({ category }) => {  
   const { LiveStock_list, loading, error } = useContext(StoreContext);  
@@ -23,7 +24,13 @@ const LiveStockDisplay = ({ category }) => {
 
   // Handle case when no stocks are available  
   if (!filteredLiveStockList.length) {  
-    return <p>No LiveStock available for the selected category.</p>;  
+    return(
+      <div className="noproduct">
+         <p>No LiveStock available for the selected category.</p>
+         <p>Dhifaama gosa kanan omishaa gabaa irraa hin qabnuu.</p>
+         <img src={assets.notfound} alt="No live LiveStock" />
+      </div>
+    )  
   }  
 
   return (  
