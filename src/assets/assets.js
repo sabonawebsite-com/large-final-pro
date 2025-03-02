@@ -48,7 +48,9 @@ import phone_icon from './phone_icon.png'
 import generate1 from './generate1.gif'
 import baxee from './baxee.gif'
 import notfound from './notfound.png'
+import user from './user.gif'
 export const assets = {
+    user,
     notfound,
     generate1,
     baxee,

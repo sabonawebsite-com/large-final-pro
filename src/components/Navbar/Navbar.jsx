@@ -9,6 +9,7 @@ import Comm_spo from '../Comm_spo/Comm_spo';
 const Navbar = ({ setShowlogin }) => {  
   const [showSearch, setShowSearch] = useState(false);
   const[comm_spo,setComm_spo] =useState(false)
+  const [userData,setUserData]=useState(false)
   const [menu, setMenu] = useState("home");  
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);  
   const navigate = useNavigate();  
@@ -18,6 +19,9 @@ const Navbar = ({ setShowlogin }) => {
   };  
 const comm_advert=()=>{
 setComm_spo(!comm_spo)
+}
+const userDataHandeler=()=>{
+  setUserData(!userData)
 }
   const logout = () => {  
     localStorage.removeItem("token");  
@@ -38,6 +42,10 @@ setComm_spo(!comm_spo)
       </ul>  
       <a href="https://sabonawebsite-com.github.io/hotel-caffe/" className='advertise'><img src={assets.generate1} alt="m"/></a>
       {comm_spo && <Comm_spo/>}
+      <a href='http://127.0.0.1:5000/'>
+      <img className='user' src={assets.user} alt="" />
+      </a>
+      {useState && <userData/>}
       <div className="navbar-right">  
        
         <img onClick={toggleSearch} className='search-icon1' src={assets.search_icon} alt="" />  

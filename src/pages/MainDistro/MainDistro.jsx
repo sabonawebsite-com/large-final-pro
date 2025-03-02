@@ -4,8 +4,13 @@ import './MainDistro.css'
 import {distro} from '../../distro/distro'
 
 const MainDistro = () => {
+  
+
   return (
+    <>
+    <h1 id='main-text'>Main distribution / Giduugala Raabsaa</h1>
     <div className='main-distro'>
+      
        {distro.map((item,index)=>{
         return(
 <div key={index} className="display">
@@ -22,6 +27,7 @@ const MainDistro = () => {
        })}
       
     </div>
+    </>
   )
 }
 
