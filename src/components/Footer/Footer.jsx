@@ -28,10 +28,6 @@ const Footer = () => {
   thanks for using our product!!
 
 </p>
-<button className='afaan-or1'><label >💚Oromo</label></button>
-<details className='det-1'>
- <p>karaleen ittin nu qunamuu dandeesan</p> 
-</details>
 <div className="footer-social-icon">
    <a href="https://facebok.com"><img src={assets.facebook_icon} alt="" /></a> 
    <a href="https://twitter.com"><img src={assets.twitter_icon} alt="" /></a> 

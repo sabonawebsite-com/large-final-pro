@@ -10,12 +10,11 @@ const Cart = () => {
     <div className='cart'>
       <div className="cart-items">
         <div className="cart-items-title">
-          <p>Title/waanta</p>
-          <p>Items/Gosa</p>
-          <p>Price/Gatii</p>
-          <p>Quantity/hagam</p>
-          <p>Total/waligalaan</p>
-          <p>Remove/Haqii</p>
+          <p>Title</p>
+          <p>Items</p>
+          <p>Price</p>
+          <p>Quantity</p>
+          <p>Total</p>
         </div>
         <br />
         <hr />
@@ -38,15 +37,15 @@ const Cart = () => {
       </div>
       <div className="cart-bottom">
         <div className="cart-total">
-          <h2>CART TOTAL (kafalltii waliigalaa)</h2>
+          <h2> TOTAL</h2>
           <div>
           <div className="cart-total-detail">
-          <p>subTotal (kafalltii waliigalaa)</p>
+          <p>subtotal</p>
           <p>Birr:{getTotalCartAmount()}</p>
         </div>
         <hr />
         <div className="cart-total-detail">
-        <p>delivery fee (Gatii Gejiibaa)</p>
+        <p>Fee</p>
           <p>Birr:{getTotalCartAmount()===0?0:20}</p>
           </div>
           <hr />
@@ -55,8 +54,9 @@ const Cart = () => {
           <b>Birr:{getTotalCartAmount()===0?0:getTotalCartAmount()+20}</b>
         </div>
         </div>
-        <button onClick={()=>navigate("/distro")} className='button11'>Main Distribution (Gidugala Rabsaa)</button>
-        <button  className='button11'><a href="https://www.ethiotelecom.et/telebirr/telebirr-registration/">PROCEED TO CHECKOUT (KAFALLTII RAAWADHUU)</a></button>
+        <button onClick={()=>navigate("/distro")} className='button11'>Main Distribution</button>
+        <button  className='button11'><a href="https://www.ethiotelecom.et/telebirr/telebirr-registration/">PROCEED TO CHECKOUT</a></button>
+        <button onClick={()=>navigate('/myorders')}>fill form</button>
         </div>
         <div className="cart-promocode">
         <div>

@@ -3,7 +3,7 @@ import './Searchle.css'
 import { food_list } from '../../assets1/assets1.js';  
 const Searchle = () => {  
     const [searchTerm, setSearchTerm] = useState("");  
-    const [cartCount, setCartCount] = useState({}); // State to manage counts for each item  
+    const [cartCount, setCartCount] = useState({}); 
   
     const addToCar = (id) => {  
       setCartCount(prevCounts => ({...prevCounts, [id]: (prevCounts[id] || 0) + 1,   
@@ -23,7 +23,7 @@ const Searchle = () => {
             placeholder='Search..'  
             id='search-card'  
             onChange={(event) => {  
-              setSearchTerm(event.target.value);  //the most important thing
+              setSearchTerm(event.target.value);
             }}  
           />  
         </div>  
@@ -36,7 +36,7 @@ const Searchle = () => {
             }  
             return false;  
           }).map((val) => {  
-            const count = cartCount[val._id] || 0; // Get the count for this specific food item  
+            const count = cartCount[val._id] || 0;
             return (  
               <div key={val._id} className='template-searched'>  
                 <img src={val.image} alt={val.name} className="img-pro" />

@@ -61,7 +61,7 @@ else{
           <button type='submit'>{currState==="Sign Up"?"Create Account":"Login"}</button>
           <div className="login-pop-up-condition">
               <input type="checkbox" required />
-              <p>Continuing  agree our privacy </p>
+              <p className='agree'>Continuing  agree with  our privacy </p>
               </div>
               {currState==="Login"?<p>create new account ?<span onClick={()=>setCurrState("Sign Up")}>click here</span></p>:
               <p>already have an account?<span onClick={()=>setCurrState("Login")}>login here</span></p>}

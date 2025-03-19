@@ -49,8 +49,14 @@ import generate1 from './generate1.gif'
 import baxee from './baxee.gif'
 import notfound from './notfound.png'
 import user from './user.gif'
+import home from './home.gif'
+import user1 from './user1.gif'
+import user_prot from './user_port.png'
 export const assets = {
+    user_prot,
+    user1,
     user,
+    home,
     notfound,
     generate1,
     baxee,
@@ -95,15 +101,15 @@ export const menu_list = [
         menu_image: menu_2
     },
     {
-        menu_name: "Sheep",
+        menu_name: "Camel",
         menu_image: menu_3
     },
     {
-        menu_name: "Goat",
+        menu_name: "Hen",
         menu_image: menu_4
     },
     {
-        menu_name: "Camel",
+        menu_name: "Goat",
         menu_image: menu_5
     },
     {

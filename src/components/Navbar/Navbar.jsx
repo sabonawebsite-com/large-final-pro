@@ -34,6 +34,7 @@ const userDataHandeler=()=>{
       <Link to='/'>  
         <img src={assets.group1} alt="" className='logo' />  
       </Link>  
+      <a className='afaan-oromo' href="http://localhost:5174/">Afaan Oromoo</a>
       <ul className="navbar-menu">  
         <Link to='/' className={menu==="home" ? "active" : ""} onClick={() => setMenu("home")}>home</Link>  
         <a href='#explore-menu' className={menu==="menu" ? "active" : ""} onClick={() => setMenu("menu")}>Product-List</a>  
@@ -43,7 +44,7 @@ const userDataHandeler=()=>{
       <a href="https://sabonawebsite-com.github.io/hotel-caffe/" className='advertise'><img src={assets.generate1} alt="m"/></a>
       {comm_spo && <Comm_spo/>}
       <a href='http://127.0.0.1:5000/'>
-      <img className='user' src={assets.user} alt="" />
+      <img className='user' src={assets.user1} alt="" />
       </a>
       {useState && <userData/>}
       <div className="navbar-right">  

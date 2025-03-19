@@ -34,8 +34,8 @@ const Contact = () => {
       <div className='contact-col'>
         <h3>Send us message <img src={assets.group1} alt="" /></h3>
         <p>Revolutionizing livestock trading. Our system provides a transparent and efficient way to buy and sell livestock.  Features include detailed animal profiles, secure payment options, and direct communication with buyers for more info👇🏿</p><br />
-        <p>Baga Naagaa Gara Gabaa Digitalawaa keenyatti Dhuftan Haaluma Armaan olitti ibsametti Karaa gababa omisha keenya ilaltanii Bitachuu dandessu </p>
-        <p>Odeffanno Gahaa Argachuu yoo barbadan Karaalee Armaan gaditti ibsameen nu qunnamaa 👇</p>
+
+      
         <ul>
           <li> <img src={assets.mail_icon} alt="" />Group5@gmail.com</li>
           <li> <img src={assets.phone_icon} alt="" />0945671967</li>
@@ -45,16 +45,16 @@ const Contact = () => {
       </div>
       <div className='contact-col'>
         <form onSubmit={onSubmit}>
-          <h2>Fill this information </h2>
-          <h2>Odefannoo Armaan gadii guutii</h2>
-          <label > Enter Your Name / Maqaa Kee 👇🏻</label>
-          <input type="text" name='name' placeholder='Enter your name / Maqaa Kee' required />
-          <label >Phone Number / Lakk bilbilaa 👇🏻</label>
-          <input type="tel" name='phone' placeholder='phone / lakk bilbilaa kee' required />
-          <label >Write message Here / Yaada Kee 👇🏻</label>
-          <textarea name='message' rows="6" placeholder='message / yaada kee' required></textarea>
+          <h2>If You Have Idea About App </h2>
+     
+          <label > Enter Your Name👇🏻</label>
+          <input type="text" name='name' placeholder='Enter your name..' required />
+          <label >Phone Number 👇🏻</label>
+          <input type="tel" name='phone' placeholder='phone..' required />
+          <label >Write message Here 👇🏻</label>
+          <textarea name='message' rows="6" placeholder='message ..' required></textarea>
         
-          <button type='submit' className='dark-btn'>SEND NOW / ERGII➡</button>
+          <button type='submit' className='dark-btn'>SEND NOW➡</button>
         </form>
         <span>{result}</span>
       </div>

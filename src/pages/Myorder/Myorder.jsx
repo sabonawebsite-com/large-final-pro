@@ -1,49 +1,54 @@
-import React, { useContext, useEffect, useState } from 'react'
- import './Myorder.css'
-import { StoreContext } from '../../context/StoreContext'
-import axios from 'axios'
-import { assets } from '../../assets/assets'
-const Myorder = () => {
-    const {url,token}=useContext(StoreContext)
-    const [data,setData]=useState([])
-    const fechorder=async()=>{
-    const response=await axios.post(url+"/api/order/userorders",{},{headers:{token}})
-    setData(response.data.data)
+import React, { useRef, useState } from 'react';  
+import emailjs from '@emailjs/browser';  
 
-    }
-    useEffect(()=>{
-if (token) {
-    fechorder()
-}
-    },[token])
-  return (
-    <div className='Myorder'>
-   <h1>My orders</h1>
-   <div className="order-continers">
-    {data.map((order,index)=>{
-return(
-    <div key={index} className='myorders-order'>
-<img src={assets.parcel_icon} alt="" />
-<p>{order.items.map((item,index)=>{
-    if (index===order.items.length-1) {
-        return item.name +"X"+item.quantity;
-    }
-    else{
-        return item.name +"X"+item.quantity+", "
-    }
-})}</p>
+export const ContactUs = () => {  
+  const form = useRef();  
+  const [statusMessage, setStatusMessage] = useState(''); // State for success/error message  
 
-<p>{order.amount}.00</p>
-<p> items:{order.items.length}</p>
-<p>{order.status}</p>
-<button onClick={fechorder}>Track Order</button>
-    </div>
-)
-    }
-    )}
-   </div>
-    </div>
-  )
-}
+  const sendEmail = (e) => {  
+    e.preventDefault();  
 
-export default Myorder
+    emailjs  
+      .sendForm('service_d9bziqc', 'template_k28tc5v', form.current, 'wzcCXP_JvhWr3Sgqk')  
+      .then(  
+        () => {  
+          setStatusMessage('Email sent successfully!'); // Set success message  
+        },  
+        (error) => {  
+          setStatusMessage('Failed to send email: ' + error.text); // Set error message  
+        }  
+      );  
+  };  
+
+  return (  
+    <form ref={form} className='place-order' onSubmit={sendEmail}>  
+      <div className="place-order-left">  
+        <p className="title">Delivery Information</p>  
+        <div className="multi-fields">  
+          <input required name='firstName' type="text" placeholder='First Name' />  
+          <input required name='lastName' type="text" placeholder='Last Name' />  
+        </div>  
+        <input required name='email' type="email" placeholder='Your Email' />  
+        <input required name='street' type="text" placeholder='Street' />  
+        <div className="multi-fields">  
+          <input required name='city' type="text" placeholder='City' />  
+          <input required name='state' type="text" placeholder='State' />  
+        </div>  
+        <div className="multi-fields">  
+          <input required name='zipCode' type="text" placeholder='Zip Code' />  
+          <input required name='country' type="text" placeholder='Country' />  
+        </div>  
+        <input required name='phone' type="tel" placeholder='Phone' />  
+        <button type='submit' className='least-button'>SEND➡</button>  
+      </div>  
+
+      <div className="cart-total-modif">  
+        {/* Your cart total content  template_h0z7ysb */}  
+      </div>  
+
+      {statusMessage && <p className="status-message">{statusMessage}</p>} {/* Display status message */}  
+    </form>  
+  );  
+};  
+
+export default ContactUs;  
