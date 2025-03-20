@@ -15,9 +15,12 @@ const MainDistro = () => {
         return(
 <div key={index} className="display">
     <img src={item.images} alt="" className='image' />
+    <div className="info">
     <p className='name-reg'>{item.region}</p>
     <p className='fees'>Fee/Geejibaa:{item.fees}</p>
-    <p className='code'>{item.code}</p>
+    <p className='code'>Code: {item.Code}</p>
+    <p>days:{item.days}</p>
+    </div>
 
 
 </div>

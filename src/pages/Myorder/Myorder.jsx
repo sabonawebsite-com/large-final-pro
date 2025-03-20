@@ -9,7 +9,7 @@ export const ContactUs = () => {
     e.preventDefault();  
 
     emailjs  
-      .sendForm('service_d9bziqc', 'template_k28tc5v', form.current, 'wzcCXP_JvhWr3Sgqk')  
+      .sendForm('service_uwt63pq', 'template_k28tc5v', form.current, 'wzcCXP_JvhWr3Sgqk')  
       .then(  
         () => {  
           setStatusMessage('Email sent successfully!'); // Set success message  
