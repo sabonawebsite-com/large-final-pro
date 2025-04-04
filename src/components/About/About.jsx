@@ -1,20 +1,23 @@
 import React from 'react'
 import './About.css'
-const About = () => {
+import { menu_list } from '../../assets/assets'
+const About = ({ category, setCategory }) => {
   return (
-    <div className='about'>
-      <h1>Well Come Live Stock market</h1>
-      <div className='about-description'>
-
-     
-      <p>My name is Sabona Marara iam Software developer Study in Borana Unversity currently </p>
-      <p>i want any one who need website for own business i will develop based on data of his or here product</p>
-      <p>please if you need contact me by email <span>sabonamarara53@gmail.com</span></p>
-
+    <div className='explore-menu' id="explore-menu">
+      <h1 id="page-title">Explore our product</h1>
+      <p>A Product delivery system is essentially a network that connects  with customers who want our product delivered to their doorstep. It typically involves three main parties:</p>
+      <div className='explore-menu-list'>
+        {menu_list.map((item, index) => {
+          return (
+            <div onClick={() => setCategory(prev => prev === item.menu_name ? "All" : item.menu_name)} key={index} className='explore-menu-list-item' id='next'>
+              <img className={category === item.menu_name ? "active" : ""} src={item.menu_image} alt="" />
+              <p className='text-show'>{item.menu_name}</p>
+            </div>
+          )
+        })}
+        <hr />
       </div>
-      
     </div>
   )
 }
-
 export default About

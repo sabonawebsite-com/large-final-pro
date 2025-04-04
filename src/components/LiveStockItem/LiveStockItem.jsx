@@ -25,7 +25,7 @@ const LiveStockItem = ({id,name,price,description,image}) => {
     <img src={assets.rating_starts} alt="" />
     </div>
     <p className="live-stock-item-description">{description} </p>
-    <p className="live-stock-item-price">birr:{price}</p>
+    <p className="live-stock-item-price">{price} birr</p>
    </div>
     </div>
    

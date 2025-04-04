@@ -52,8 +52,14 @@ import user from './user.gif'
 import home from './home.gif'
 import user1 from './user1.gif'
 import user_prot from './user_port.png'
+import github from './github.png'
+import youtube from './youtube.png'
+import reddit from './reddit.png'
 export const assets = {
     user_prot,
+    github,
+    youtube,
+    reddit,
     user1,
     user,
     home,

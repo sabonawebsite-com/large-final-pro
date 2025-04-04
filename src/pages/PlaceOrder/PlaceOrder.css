@@ -1,51 +1,168 @@
-.place-order{
-    margin-top: 100px;
+.place-order {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    gap: 50px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(240, 4, 220, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .place-order:hover {
+    transform: translateY(-5px);
+  }
+  
+  .place-order-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f509ba;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    align-items: center;
+  }
+  
+  .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #fafdff;
+    border-radius: 2px;
+  }
+  
+  .multi-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #37fa06;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #a5caee;
+    color: black;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #fdfeff;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(9, 132, 227, 0.1);
+  }
 
-}
-.place-order-left{
-    width: 100%;
-    max-width: max(30% 500px);
-}
-.place-order-left .title{
-margin-bottom: 50px;
-font-size: 30px;
-font-weight: 600;
-}
-.place-order-left input{
-    margin-bottom: 15px;
-    border: 1px solid rgb(231, 228, 222);
-    padding: 10px;
-    width: 100%;
-    outline-color: tomato;
-    border-radius: 4px;
-}
-.place-order-left .multi-fields{
-    display: flex;
-    gap: 10px;
-}
-.place-order-right{
-    width: 100%;
-    max-width: max(40% 500px);
-}
-.cart-total-detail b{
-    align-items: end;
-}
- .cart-total-detail.display-price{
-margin-right: 50px;
-}
-.least-button{
-    background-color: tomato;
-    border-radius: 5px;
+  input::placeholder {
+    color: #1a1919;
+  }
+  
+  .least-button {
+    align-self: flex-start;
+    padding: 1rem 2.5rem;
+    background: #4f4fe6;
+    color: rgb(255, 255, 255);
     border: none;
-    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.1rem;
     font-weight: 600;
-    animation: 2s;
-
-}
-.least-button:hover{
-    background-color: rgb(230, 190, 190);
-}
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .least-button:hover {
+    background: #e6eaec;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(9, 132, 227, 0.2);
+  }
+  
+  .least-button::after {
+    content: '➡';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+  }
+  
+  .least-button:hover::after {
+    right: 15px;
+  }
+  
+  .status-message {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+    position: relative;
+  }
+  
+  .status-message[data-success="true"] {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+  }
+  
+  .status-message[data-success="false"] {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+  }
+  
+  .cart-total-modif {
+    flex: 0 0 300px;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #f3f7fc;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .place-order {
+      flex-direction: column;
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+  
+    .multi-fields {
+      grid-template-columns: 1fr;
+    }
+  
+    .cart-total-modif {
+      flex: none;
+      width: 100%;
+    }
+  
+    .least-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }

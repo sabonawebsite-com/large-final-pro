@@ -1,3 +1,4 @@
+import React, { useState } from 'react'; 
 import axios from 'axios';
 
 const ChapaPayment = () => {
@@ -15,26 +16,39 @@ const ChapaPayment = () => {
     setError('');
 
     try {
-      // Validate inputs
+      
       if (!amount || !email || !firstName || !lastName) {
         throw new Error('Please fill in all required fields');
       }
+      if (Number(amount) <= 0) { 
+        throw new Error('Amount must be greater than 0');
+      }
 
-      // Send payment request to your backend
-      const response = await axios.post('YOUR_BACKEND_ENDPOINT/chapa-initiate', {
-        amount,
-        currency,
-        email,
-        first_name: firstName,
-        last_name: lastName,
-        tx_ref: `tx-${Date.now()}`, // Generate unique transaction reference
-      });
+      const response = await axios.post(
+        'http://localhost:4000/api/chapa-initiate', 
+        {
+          amount,
+          currency,
+          email,
+          first_name: firstName,
+          last_name: lastName,
+          tx_ref: `tx-${Date.now()}`,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
+      );
 
-      // Redirect to Chapa checkout page
+      if (!response.data.checkout_url) {
+        throw new Error('No checkout URL received');
+      }
+
       window.location.href = response.data.checkout_url;
       
     } catch (err) {
-      setError(err.response?.data?.message || err.message);
+      setError(err.response?.data?.message || err.message || 'Payment failed'); 
       setLoading(false);
     }
   };
@@ -45,57 +59,18 @@ const ChapaPayment = () => {
       {error && <div className="error-message">{error}</div>}
       
       <form onSubmit={handleSubmit}>
+
         <div className="form-group">
           <label>Amount:</label>
           <input
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            min="1" 
             required
           />
         </div>
-
-        <div className="form-group">
-          <label>Currency:</label>
-          <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
-            <option value="ETB">ETB</option>
-            <option value="USD">USD</option>
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label>First Name:</label>
-          <input
-            type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Last Name:</label>
-          <input
-            type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-          />
-        </div>
-
-        <button type="submit" disabled={loading}>
-          {loading ? 'Processing...' : 'Pay with Chapa'}
-        </button>
+     
       </form>
     </div>
   );
